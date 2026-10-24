@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MediMind – AI Health Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>💊 MediMind</h1><p>AI health assistant with smart reminders &amp; insights · SDG 3: Good Health and Well-Being</p></header>
+<div id="alert"></div>
+<main>
+<section><h2>Add medication</h2>
+<div class="row"><input id="n" placeholder="Name (e.g. Metformin)"><input id="d" placeholder="Dose (500 mg)"><span style="display:flex;gap:4px"><select id="th"></select><select id="tm"></select><select id="ta"><option>AM</option><option>PM</option></select></span><button onclick="add()">Add</button></div>
+<div class="row"><button class="s" onclick="demo()">Load demo data</button><button class="s" onclick="reset()">Reset</button></div>
+<h2 style="margin-top:12px">Today's schedule</h2><div id="list"></div></section>
+<section><h2>Adherence (last 7 days)</h2><div class="big" id="pct">–</div><div id="bars"></div>
+<h2 style="margin-top:12px">Smart insights</h2><div id="ins"></div></section>
+<section style="grid-column:1/-1"><h2>AI health assistant</h2><div id="chat"></div>
+<div class="row"><input id="q" placeholder="Ask: I missed a dose / side effects / take with food…" onkeydown="if(event.key==='Enter')ask()"><button onclick="ask()">Send</button></div></section>
+</main>
+<p class="foot">Prototype for education only. Not a substitute for professional medical advice.</p>
+<script src="script.js"></script>
+</body>
+</html>
